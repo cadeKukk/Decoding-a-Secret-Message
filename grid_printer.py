@@ -7,7 +7,7 @@ def print_character_grid(doc_url: str) -> None:
     try:
         # Fetch and parse the document
         response = requests.get(doc_url)
-        soup = BeautifulSoup(response.text, 'html.parser')
+        soup = BeautifulSoup(response.content, 'html.parser')
         
         # Find the table
         table = soup.find('table')
